@@ -1,0 +1,17 @@
+<!-- Interpolation-->
+{{firstName + " "+ lastName}} 
+
+{{a + b}}<br/><br/>
+
+<!--Property Binding-->
+<input type="button" value="ok" [disabled]="disableButton"/> <br/><br/>
+<input type="button" value="Cancel" disabled="{{disableButton}}"/> <br/><br/>
+
+
+
+<!--Event Binding-->
+<input type="button" value="ok" (click)="changeName()"/>
+
+
+{{address}}
+<input type="text" [(ngModel)]="address" (input)="toVerfiy()"/>

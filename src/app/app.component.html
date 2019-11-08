@@ -1,0 +1,17 @@
+<input type="button" value="pushkar" (click)="userDetailAssign('pushkar')"/>
+<input type="button" value="kamal" (click)="userDetailAssign('kamal')"/>
+<input type="button" value="avinash" (click)="userDetailAssign('avinash')"/>
+
+<app-parent-component [userDetail]="userDetail">
+</app-parent-component>
+
+<br/><br/>
+
+<ul>
+    <li (click)="changeTab('home')">Home</li>
+    <li (click)="changeTab('about')">About Us</li>
+</ul>
+
+<app-home *ngIf="activatedTab==='home'"></app-home>
+
+<app-about-us *ngIf="activatedTab==='about'"></app-about-us>
